@@ -1,7 +1,7 @@
 import { sequelize } from "../database";
 import { DataTypes, Model } from "sequelize";
 
-interface CustumerInstance extends Model {
+export interface CustumerInstance extends Model {
     id: number
     name: string    
     phone: string

@@ -1,5 +1,6 @@
 import { sequelize } from "../database";
-import { DataTypes, Model } from "sequelize";
+import { BelongsToManyAddAssociationMixin, DataTypes, Model } from "sequelize";
+import { CustumerInstance } from "./custumer";
 
 interface RestaurantInstance extends Model {
     id: number
@@ -7,6 +8,7 @@ interface RestaurantInstance extends Model {
     description: string
     phone: string
     address: string
+    addReview: BelongsToManyAddAssociationMixin<CustumerInstance, number>
 }
 
 
